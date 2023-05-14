@@ -1,0 +1,27 @@
+---
+apiVersion: eksctl.io/v1alpha5
+kind: ClusterConfig
+metadata:
+  name: management
+  region: us-west-2
+
+iam:
+  withOIDC: true
+
+addons:
+- name: kube-proxy
+  version: latest
+  resolveConflicts: overwrite
+- name: vpc-cni
+  attachPolicyARNs:
+  - arn:aws:iam::aws:policy/AmazonEKS_CNI_Policy
+  version: latest
+  resolveConflicts: overwrite
+- name: coredns
+  version: latest
+  resolveConflicts: overwrite
+- name: aws-ebs-csi-driver
+  version: latest
+  attachPolicyARNs:
+  - arn:aws:iam::aws:policy/service-role/AmazonEBSCSIDriverPolicy
+  resolveConflicts: overwrite
