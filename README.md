@@ -71,3 +71,10 @@ eksctl update addon -f add-ons.yaml
 CloudFormation stacks will create IAM Roles that are assumable by Kubernetes Service Accounts. These roles are known as IAM Role for Service Account (IRSA).
 ![alt text](pictures/aws-eks-add-ons4.png)
 ![alt text](pictures/aws-eks-add-ons5.png)
+
+## More Information
+Below are related links for more information:
+
+* [Amazon EKS add-ons](https://docs.aws.amazon.com/eks/latest/userguide/eks-add-ons.html)
+* [Amazon EBS CSI driver is now generally available in Amazon EKS add-ons](https://aws.amazon.com/blogs/containers/amazon-ebs-csi-driver-is-now-generally-available-in-amazon-eks-add-ons/)
+* [eksctl addons](https://eksctl.io/usage/addons/)
