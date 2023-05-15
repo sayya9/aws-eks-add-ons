@@ -26,7 +26,7 @@ eksctl utils describe-addon-versions --kubernetes-version $EKS_VERSION | grep Ad
 View the versions available for add-ons. Replace `name-of-addon` with the name of the add-on you'd like to view the versions for.
 ```
 export EKS_VERSION=1.26
-eksctl utils describe-addon-versions --kubernetes-version $EKS_VERSION --name name-of-addon | grep "AddonVersion.*${EKS_VERSION}"
+eksctl utils describe-addon-versions --kubernetes-version $EKS_VERSION --name name-of-addon | grep AddonVersion
 ```
 The picture below is for kube-proxy:
 ![alt text](pictures/aws-eks-add-ons3.png)
