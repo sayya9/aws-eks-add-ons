@@ -17,6 +17,7 @@ addons:
   - arn:aws:iam::aws:policy/AmazonEKS_CNI_Policy
   version: latest
   resolveConflicts: overwrite
+  configurationValues: '{"env":{"AWS_VPC_K8S_CNI_EXTERNALSNAT":"true"}}'
 - name: coredns
   version: latest
   resolveConflicts: overwrite
